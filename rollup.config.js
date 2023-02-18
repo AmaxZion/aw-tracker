@@ -1,0 +1,42 @@
+import ts from 'rollup-plugin-typescript2';
+import dts from 'rollup-plugin-dts';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filenameNew = fileURLToPath(import.meta.url);
+const __dirnameNew = path.dirname(__filenameNew);
+
+export default [
+  {
+    // 入口文件
+    input: './src/core/index.ts',
+    output: [
+      // 打包esModule
+      {
+        file: path.resolve(__dirnameNew, './dist/index.esm.js'),
+        format: 'esm',
+      },
+      // 打包common js
+      {
+        file: path.resolve(__dirnameNew, './dist/index.cjs.js'),
+        format: 'cjs',
+      },
+      // 打包AMD CMD UMD
+      {
+        input: './src/core/index.ts',
+        file: path.resolve(__dirnameNew, './dist/index.js'),
+        format: 'umd',
+        name: 'tracker',
+      },
+    ],
+    pulgins: [ts()],
+  },
+  {
+    //打包声明文件
+    input: './src/core/index.ts',
+    output: {
+      file: path.resolve(__dirnameNew, './dist/index.d.js'),
+      format: 'es',
+    },
+    pulgins: [dts()],
+  },
+];
