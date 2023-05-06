@@ -13,7 +13,7 @@ export default [
       // 打包esModule
       {
         file: path.resolve(__dirnameNew, './dist/index.esm.js'),
-        format: 'esm',
+        format: 'es',
       },
       // 打包common js
       {
@@ -28,15 +28,19 @@ export default [
         name: 'tracker',
       },
     ],
-    pulgins: [ts()],
-  },
-  {
+    // 配置ts
+    pulgins: [
+      ts(),
+    ],
+  }, {
     //打包声明文件
     input: './src/core/index.ts',
     output: {
-      file: path.resolve(__dirnameNew, './dist/index.d.js'),
+      file: path.resolve(__dirnameNew, './dist/index.d.ts'),
       format: 'es',
     },
-    pulgins: [dts()],
+    pulgins: [
+      dts()
+    ],
   },
 ];

@@ -2,7 +2,9 @@
   "name": "aw-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,3 +28,4 @@
     "typescript": "^4.9.5"
   }
 }
+
