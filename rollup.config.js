@@ -29,7 +29,7 @@ export default [
       },
     ],
     // 配置ts
-    pulgins: [
+    plugins: [
       ts(),
     ],
   }, {
@@ -39,7 +39,7 @@ export default [
       file: path.resolve(__dirnameNew, './dist/index.d.ts'),
       format: 'es',
     },
-    pulgins: [
+    plugins: [
       dts()
     ],
   },

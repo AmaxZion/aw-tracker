@@ -1,6 +1,6 @@
 {
   "name": "aw-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -14,8 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/AmaxZion/aw-tracker.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["前端", "埋点", "tracker"],
+  "files": ["dist"],
+  "author": "gw",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AmaxZion/aw-tracker/issues"
